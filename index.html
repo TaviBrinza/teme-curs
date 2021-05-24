@@ -1,15 +1,44 @@
-<!DOCTYPE html>
-<html >
-<head>
-
-  <link rel = "stylesheet" href = "background_style.css">
-  <link rel = "stylesheet" href = "style.css">
-  <script src="script.js" defer></script>
-  <title>Progress Bar </title>
-</head>
-
-<body>
-  <div class="Progress bar " style="--width:10"
-  data-label= "Loading..."></div>
+<html lang="en">
+  <head>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/holistic/holistic.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css"> 
+  </head>
   <body>
-</html>
+      <section>
+          <div class="container">
+              <div id="display"></div>
+              <div class="buttons">
+                  <div class="button">C</div>
+                  <div class="button">/</div>
+                  <div class="button">*</div>
+                  <div class="button">&larr;</div>
+                  <div class="button">7</div>
+                  <div class="button">8</div>
+                  <div class="button">9</div>
+                  <div class="button">-</div>
+                  <div class="button">4</div>
+                  <div class="button">5</div>
+                  <div class="button">6</div>
+                  <div class="button">+</div>
+                  <div class="button">1</div>
+                  <div class="button">2</div>
+                  <div class="button">3</div>
+                  <div class="button">.</div>
+                  <div class="button">(</div>
+                  <div class="button">0</div>
+                  <div class="button">)</div>
+                  <div id="equal" class="button">=</div>
+              </div>
+          </div>
+      </section>
+      <script src="script.js"></script>
+    <video id= "video-imput" ></video>
+    <canvas id="canvas-otput"></canvas>
+  </body>
+  </html>
