@@ -1,35 +1,44 @@
-*,*::before, *::after {
-box-sizing: border-box;
+.container {
+    max-width: 350px;
+    margin: 350px;
+    box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
 }
 
-body{
-    padding: 0;
-    margin: 0;
-
+#display {
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+    padding: 16px 8px;
+    font-size: 25px;
 }
 
-.progress-bar{
-    position: relative;
-    width: 500;
-    height: 3em;
-    background: color #111;;
-    border-radius: 1.5em;
+.buttons {
+    display: grid;
+    border-bottom: 1px solid #999;
+    border-left: 1px solid#999;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.buttons > div {
+    border-top: 1px solid #999;
+    border-right: 1px solid#999;
+}
+
+.button {
+    border: 0.5px solid #999;
+    line-height: 100px;
+    text-align: center;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+#equal {
+    background-color: rgb(85, 85, 255);
     color: white;
 }
 
-.progress-bar::before{
-    content: attr(data-label);
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: .5em;
-    top: .5em;
-    bottom:.5em;
-    width: calc(var(--whit,0)*1%);
-    min-width: 2rem;
-    max-width: calc(100%-1em);
-    background-color: yellowgreen;
-    border-radius: 1em;
-    padding: 1em;
-
+.button:hover {
+    background-color: #323330;
+    color: white;
+    transition: 0.5s ease-in-out;
 }
