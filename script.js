@@ -29,7 +29,7 @@ buttons.map( button => {
 
 const videoElement = document.getElementById('video-input');
 const canvasElement = document.getElementById('canvas-output');
-const canvasCtx = canvasElement.getCotext('2d');
+const canvasCtx = canvasElement.getContext('2d');
 
 const holistic = new Holistic({locateFile: (file) => {
     return `https://cdn.jsdelivr.net/npm/@mediapipe/holistic/${file}`;
@@ -45,12 +45,6 @@ const holistic = new Holistic({locateFile: (file) => {
     canvasCtx.clearRect(0, 0, canvasElement.width, canvasElement.height);
     canvasCtx.drawImage(
         results.image, 0, 0, canvasElement.width, canvasElement.height);
-    drawConnectors(canvasCtx, results.poseLandmarks, POSE_CONNECTIONS,
-                   {color: '#00FF00', lineWidth: 4});
-    drawLandmarks(canvasCtx, results.poseLandmarks,
-                  {color: '#FF0000', lineWidth: 2});
-    drawConnectors(canvasCtx, results.faceLandmarks, FACEMESH_TESSELATION,
-                   {color: '#C0C0C070', lineWidth: 1});
     drawConnectors(canvasCtx, results.leftHandLandmarks, HAND_CONNECTIONS,
                    {color: '#CC0000', lineWidth: 5});
     drawLandmarks(canvasCtx, results.leftHandLandmarks,
