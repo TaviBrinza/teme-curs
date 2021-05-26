@@ -1,15 +1,23 @@
+*{
+    margin:2;
+    padding: 0;
+}
 .container {
-    max-width: 350px;
-    margin: 350px;
-    box-shadow: 0px 0px 43px 17px rgba(153,153,153,1);
+    max-width:200px;
+    margin-top: 30px;
+    margin-left: 10px;
+    z-index: 2;
+    margin-left: 20px;
+    position: relative;
+    opacity: 0.7;
 }
 
 #display {
     text-align: right;
-    height: 70px;
-    line-height: 70px;
-    padding: 16px 8px;
-    font-size: 25px;
+    height: 60px;
+    line-height: 60px;
+    padding: 18px 8px;
+    font-size: 20px;
 }
 
 .buttons {
@@ -41,4 +49,20 @@
     background-color: #323330;
     color: white;
     transition: 0.5s ease-in-out;
+}
+
+#video-input{
+    display: none;
+}
+
+#canvas-output{ 
+    width:950px;
+    height: 650px;
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+    top:20px;
+    left:20px;
+    border: 1px solid;
+    z-index: 1;
 }
