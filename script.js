@@ -98,8 +98,8 @@ const questions = [
     answers: [
       { text: 'Kinda', correct: false },
       { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: 'No', correct: false },
+      { text: 'Maybe', correct: false }
     ]
   },
   {
