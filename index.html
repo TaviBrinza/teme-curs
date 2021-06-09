@@ -1,44 +1,28 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/holistic/holistic.js" crossorigin="anonymous"></script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculator</title>
-    <link rel="stylesheet" href="styles.css"> 
-  </head>
-  <body>
-      <section>
-          <div class="container">
-              <div id="display"></div>
-              <div class="buttons">
-                  <div class="button">C</div>
-                  <div class="button">/</div>
-                  <div class="button">*</div>
-                  <div class="button">&larr;</div>
-                  <div class="button">7</div>
-                  <div class="button">8</div>
-                  <div class="button">9</div>
-                  <div class="button">-</div>
-                  <div class="button">4</div>
-                  <div class="button">5</div>
-                  <div class="button">6</div>
-                  <div class="button">+</div>
-                  <div class="button">1</div>
-                  <div class="button">2</div>
-                  <div class="button">3</div>
-                  <div class="button">.</div>
-                  <div class="button">(</div>
-                  <div class="button">0</div>
-                  <div class="button">)</div>
-                  <div id="equal" class="button">=</div>
-              </div>
-          </div>
-    </section>
-    <video id= "video-input" ></video>
-    <canvas id="canvas-output"></canvas>
-    <script src="script.js" module ></script>
-  </body>
-  </html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="styles.css" rel="stylesheet">
+  <script defer src="script.js"></script>
+  <title>Quiz App</title>
+</head>
+<body>
+  <div class="container">
+    <div id="question-container" class="hide">
+      <div id="question">Question</div>
+      <div id="answer-buttons" class="btn-grid">
+        <button class="btn">Answer 1</button>
+        <button class="btn">Answer 2</button>
+        <button class="btn">Answer 3</button>
+        <button class="btn">Answer 4</button>
+      </div>
+    </div>
+    <div class="controls">
+      <button id="start-btn" class="start-btn btn">Start</button>
+      <button id="next-btn" class="next-btn btn hide">Next</button>
+    </div>
+  </div>
+</body>
+</html>
